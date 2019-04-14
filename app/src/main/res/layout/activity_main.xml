@@ -5,4 +5,74 @@
     android:id="@+id/Relative_Layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"></RelativeLayout>
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/SearchBar"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="70dp"
+        android:inputType="text"
+        android:textAlignment="center"/>
+
+    <Button
+        android:id="@+id/SearchButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="170dp"
+        android:fontFamily="cursive"
+        android:text="Search"
+        android:textSize="20dp"/>
+
+    <TextView
+        android:id="@+id/pressure"
+        android:layout_width="120dp"
+        android:layout_height="70dp"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="300dp"
+        android:text="Pressure"
+        android:textAlignment="gravity"
+        android:gravity="center"
+        android:textSize="23dp"
+        android:layout_marginStart="60dp"
+        android:fontFamily="casual"/>
+
+    <TextView
+        android:id="@+id/humidity"
+        android:layout_width="120dp"
+        android:layout_height="70dp"
+        android:layout_marginLeft="220dp"
+        android:layout_marginTop="300dp"
+        android:text="Humidity"
+        android:gravity="center"
+        android:textSize="23dp"
+        android:layout_marginStart="220dp"
+        android:fontFamily="casual"/>
+
+    <TextView
+        android:id="@+id/temp_min"
+        android:layout_width="120dp"
+        android:layout_height="70dp"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="450dp"
+        android:text="Temp_Min"
+        android:gravity="center"
+        android:textSize="23dp"
+        android:layout_marginStart="60dp"
+        android:fontFamily="casual"/>
+
+    <TextView
+        android:id="@+id/temp_max"
+        android:layout_width="120dp"
+        android:layout_height="70dp"
+        android:layout_marginLeft="220dp"
+        android:layout_marginTop="450dp"
+        android:text="Temp_Max"
+        android:gravity="center"
+        android:textSize="23dp"
+        android:layout_marginStart="220dp"
+        android:fontFamily="casual"/>
+
+</RelativeLayout>
