@@ -20,14 +20,13 @@ public class MainActivity extends AppCompatActivity {
     public Integer temp_min;
     public Integer temp_max;
 
-    public Double wind_velocity = 0.0;
-
-   /* public EditText SearchBar;
+    public EditText SearchBar;
     public Button SearchButton;
+    public TextView Temperature;
     public TextView Min_Temp;
     public TextView Max_Temp;
     public TextView Humidity;
-    public TextView Pressure;*/
+    public TextView Pressure;
 
 
     private static final String API_KEY = "b6907d289e10d714a6e88b30761fae22";
@@ -40,22 +39,21 @@ public class MainActivity extends AppCompatActivity {
 
         service= BuilderAPI.getClient().create(WeatherService.class);
 
-        getWeatherData();
-
-        /*SearchBar = findViewById(R.id.SearchBar);
+        SearchBar = findViewById(R.id.SearchBar);
         SearchButton = findViewById(R.id.SearchButton);
+        Temperature = findViewById(R.id.Temperature);
         Min_Temp = findViewById(R.id.temp_min);
         Max_Temp = findViewById(R.id.temp_max);
         Humidity = findViewById(R.id.humidity);
-        Pressure = findViewById(R.id.pressure);*/
+        Pressure = findViewById(R.id.pressure);
 
-        /*SearchButton.setOnClickListener(new View.OnClickListener() {
+        SearchButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 getWeatherData();
             }
         });
-*/
+
     }
 
     public void getWeatherData(){
@@ -63,25 +61,21 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onResponse(Call<WeatherResponse> call, Response<WeatherResponse> response) {
 
-                Log.d("ResponseDebug", "Response successful");
+                Log.d("ResponseSuccessful", "Response successful");
 
                 WeatherResponse res = response.body();
-
 
                 temperature = res.getMain().getTemp();
                 pressure = res.getMain().getPressure();
                 humidity = res.getMain().getHumidity();
                 temp_min = res.getMain().getTempMin();
                 temp_max = res.getMain().getTempMax();
-                wind_velocity = res.getWind().getSpeed();
 
-                /*Pressure.setText("" + pressure);
+                Temperature.setText(temperature.toString());
+                Pressure.setText(pressure);
                 Humidity.setText(humidity);
                 Min_Temp.setText(temp_min);
-                Max_Temp.setText(temp_max);*/
-
-                Log.d("Debug", temperature.toString());
-                Log.d("pressure", "" + pressure);
+                Max_Temp.setText(temp_max);
             }
 
             @Override

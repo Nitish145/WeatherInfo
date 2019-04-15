@@ -27,11 +27,23 @@
         android:textSize="20dp"/>
 
     <TextView
+        android:id="@+id/Temperature"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="263dp"
+        android:text="Temperature"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:textSize="30dp"
+        android:fontFamily="casual"/>
+
+    <TextView
         android:id="@+id/pressure"
         android:layout_width="120dp"
         android:layout_height="70dp"
         android:layout_marginLeft="60dp"
-        android:layout_marginTop="300dp"
+        android:layout_marginTop="350dp"
         android:text="Pressure"
         android:textAlignment="gravity"
         android:gravity="center"
@@ -44,7 +56,7 @@
         android:layout_width="120dp"
         android:layout_height="70dp"
         android:layout_marginLeft="220dp"
-        android:layout_marginTop="300dp"
+        android:layout_marginTop="350dp"
         android:text="Humidity"
         android:gravity="center"
         android:textSize="23dp"
@@ -56,7 +68,7 @@
         android:layout_width="120dp"
         android:layout_height="70dp"
         android:layout_marginLeft="60dp"
-        android:layout_marginTop="450dp"
+        android:layout_marginTop="500dp"
         android:text="Temp_Min"
         android:gravity="center"
         android:textSize="23dp"
@@ -68,7 +80,7 @@
         android:layout_width="120dp"
         android:layout_height="70dp"
         android:layout_marginLeft="220dp"
-        android:layout_marginTop="450dp"
+        android:layout_marginTop="500dp"
         android:text="Temp_Max"
         android:gravity="center"
         android:textSize="23dp"
