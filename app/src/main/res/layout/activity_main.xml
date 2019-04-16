@@ -7,13 +7,30 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <TextView
+        android:id="@+id/City_Name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:textSize="35dp"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        android:fontFamily="cursive" />
+
     <EditText
         android:id="@+id/SearchBar"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="70dp"
+        android:layout_marginTop="90dp"
         android:inputType="text"
+        android:textStyle="bold"
+        android:textSize="25dp"
+        android:fontFamily="cursive"
+        android:hint="City Name"
         android:textAlignment="center"/>
 
     <Button
@@ -21,7 +38,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="170dp"
+        android:layout_marginTop="150dp"
         android:fontFamily="cursive"
         android:text="Search"
         android:textSize="20dp"/>
@@ -31,8 +48,7 @@
         android:layout_width="wrap_content"
         android:layout_height="40dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="263dp"
-        android:text="Temperature"
+        android:layout_marginTop="300dp"
         android:textAlignment="center"
         android:gravity="center"
         android:textSize="30dp"
@@ -43,8 +59,7 @@
         android:layout_width="120dp"
         android:layout_height="70dp"
         android:layout_marginLeft="60dp"
-        android:layout_marginTop="350dp"
-        android:text="Pressure"
+        android:layout_marginTop="400dp"
         android:textAlignment="gravity"
         android:gravity="center"
         android:textSize="23dp"
@@ -56,8 +71,7 @@
         android:layout_width="120dp"
         android:layout_height="70dp"
         android:layout_marginLeft="220dp"
-        android:layout_marginTop="350dp"
-        android:text="Humidity"
+        android:layout_marginTop="400dp"
         android:gravity="center"
         android:textSize="23dp"
         android:layout_marginStart="220dp"
@@ -68,8 +82,7 @@
         android:layout_width="120dp"
         android:layout_height="70dp"
         android:layout_marginLeft="60dp"
-        android:layout_marginTop="500dp"
-        android:text="Temp_Min"
+        android:layout_marginTop="550dp"
         android:gravity="center"
         android:textSize="23dp"
         android:layout_marginStart="60dp"
@@ -80,10 +93,80 @@
         android:layout_width="120dp"
         android:layout_height="70dp"
         android:layout_marginLeft="220dp"
-        android:layout_marginTop="500dp"
-        android:text="Temp_Max"
+        android:layout_marginTop="550dp"
         android:gravity="center"
         android:textSize="23dp"
+        android:layout_marginStart="220dp"
+        android:fontFamily="casual"/>
+
+    <TextView
+        android:id="@+id/Temperature_head"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="240dp"
+        android:text="Temperature"
+        android:textColor="#000000"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:textSize="30dp"
+        android:textStyle="bold|italic"
+        android:fontFamily="casual"/>
+
+    <TextView
+        android:id="@+id/pressure_head"
+        android:layout_width="120dp"
+        android:layout_height="70dp"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="350dp"
+        android:text="Pressure"
+        android:textColor="#000000"
+        android:textAlignment="gravity"
+        android:gravity="center"
+        android:textSize="23dp"
+        android:textStyle="bold|italic"
+        android:layout_marginStart="60dp"
+        android:fontFamily="casual"/>
+
+    <TextView
+        android:id="@+id/humidity_head"
+        android:layout_width="120dp"
+        android:layout_height="70dp"
+        android:layout_marginLeft="220dp"
+        android:layout_marginTop="350dp"
+        android:text="Humidity"
+        android:textColor="#000000"
+        android:gravity="center"
+        android:textSize="23dp"
+        android:textStyle="bold|italic"
+        android:layout_marginStart="220dp"
+        android:fontFamily="casual"/>
+
+    <TextView
+        android:id="@+id/temp_min_head"
+        android:layout_width="120dp"
+        android:layout_height="70dp"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="500dp"
+        android:text="Temp_Min"
+        android:textColor="#000000"
+        android:gravity="center"
+        android:textSize="23dp"
+        android:textStyle="bold|italic"
+        android:layout_marginStart="60dp"
+        android:fontFamily="casual"/>
+
+    <TextView
+        android:id="@+id/temp_max_head"
+        android:layout_width="120dp"
+        android:layout_height="70dp"
+        android:layout_marginLeft="220dp"
+        android:layout_marginTop="500dp"
+        android:text="Temp_Max"
+        android:textColor="#000000"
+        android:gravity="center"
+        android:textSize="23dp"
+        android:textStyle="bold|italic"
         android:layout_marginStart="220dp"
         android:fontFamily="casual"/>
 

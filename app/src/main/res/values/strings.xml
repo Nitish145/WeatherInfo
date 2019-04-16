@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">WeatherInfo</string>
+    <string name="degree_celsius">"@style/degree_celsius"</string>
 </resources>

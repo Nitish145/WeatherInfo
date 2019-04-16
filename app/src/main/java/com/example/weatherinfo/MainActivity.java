@@ -14,12 +14,7 @@ import retrofit2.Response;
 
 public class MainActivity extends AppCompatActivity {
 
-    public Double temperature;
-    public Integer pressure;
-    public Integer humidity;
-    public Integer temp_min;
-    public Integer temp_max;
-
+    public TextView City_name;
     public EditText SearchBar;
     public Button SearchButton;
     public TextView Temperature;
@@ -39,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
 
         service= BuilderAPI.getClient().create(WeatherService.class);
 
+        City_name = findViewById(R.id.City_Name);
         SearchBar = findViewById(R.id.SearchBar);
         SearchButton = findViewById(R.id.SearchButton);
         Temperature = findViewById(R.id.Temperature);
@@ -57,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void getWeatherData(){
-        service.getWeatherData("Delhi", API_KEY).enqueue(new Callback<WeatherResponse>() {
+        service.getWeatherData(SearchBar.getText().toString(), API_KEY).enqueue(new Callback<WeatherResponse>() {
             @Override
             public void onResponse(Call<WeatherResponse> call, Response<WeatherResponse> response) {
 
@@ -65,17 +61,13 @@ public class MainActivity extends AppCompatActivity {
 
                 WeatherResponse res = response.body();
 
-                temperature = res.getMain().getTemp();
-                pressure = res.getMain().getPressure();
-                humidity = res.getMain().getHumidity();
-                temp_min = res.getMain().getTempMin();
-                temp_max = res.getMain().getTempMax();
-
-                Temperature.setText(temperature.toString());
-                Pressure.setText(pressure);
-                Humidity.setText(humidity);
-                Min_Temp.setText(temp_min);
-                Max_Temp.setText(temp_max);
+                City_name.setText(SearchBar.getText());
+                SearchBar.setText("");
+                Temperature.setText(String.valueOf(res.getMain().getTemp()));
+                Pressure.setText(String.valueOf(res.getMain().getPressure()));
+                Humidity.setText(String.valueOf(res.getMain().getHumidity()));
+                Min_Temp.setText(String.valueOf(res.getMain().getTempMin()));
+                Max_Temp.setText(String.valueOf(res.getMain().getTempMax()));
             }
 
             @Override
